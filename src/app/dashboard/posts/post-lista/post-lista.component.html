@@ -1,0 +1,35 @@
+<div class="module-header">
+    <div class="left">
+      <h3>Posts</h3>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A distinctio animi, veniam voluptate doloribus esse.
+      </p>
+    </div>  
+    <div class="right">
+      <button mat-raised-button color="prymary" (click)="onNavigateToNewPost()">ADD</button>
+    </div>
+  </div>  
+  <div class="module-body">  
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Body</th>
+          <th>User ID</th>
+        </tr>
+      </thead>  
+      <tbody>
+        @for (p of posts; track $index) {
+            <tr (click)="onNavigateToPostDetail(p.id)">
+                <td>{{ p.id }}</td>
+                <td>{{ p.title }}</td>
+                <td>{{ p.body }}</td>
+                <td>{{ p.userId }}</td>
+              </tr>
+        }
+        
+      </tbody>
+    </table>
+  
+  
+  </div>

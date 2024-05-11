@@ -1,2 +1,10 @@
-<p>dashboard works!</p>
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <span (click)="onNavigateToHomePage()">APP</span>
+        <button mat-button (click)="onNavigateToCursoPage()">Curso</button>
+        <button mat-button (click)="onNavigateToStatePage()">Estado</button>
+        <button mat-button (click)="onNavigateToPostPage()">Posts</button>
+        <button mat-raised-button (click)="onLogout()" >Link</button>
+    </mat-toolbar-row>
+</mat-toolbar>
 <router-outlet></router-outlet>

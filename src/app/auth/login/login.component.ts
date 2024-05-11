@@ -18,6 +18,6 @@ export class LoginComponent {
     //console.log('AuthService::loging', userEmailInput, userPasswordInput);
     //sessionStorage.setItem('isLogged', 'true');
     this.authService.loging(userEmailInput.value, userPasswordInput.value);
-    this.router.navigate(['dashboard']);
+    this.router.navigateByUrl("/dashboard");
   }
 }
